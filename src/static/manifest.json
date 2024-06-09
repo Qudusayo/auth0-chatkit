@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Auth0 Chatkit",
-  "description": "Auth0 Chat Kit", 
+  "description": "Auth0 Chat Kit",
   "version": "1.0.0",
   "action": {
     "default_popup": "popup.html",
@@ -22,5 +22,6 @@
       "matches": ["<all_urls>"],
       "js": ["contentScript.js"]
     }
-  ]
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1fmN5tnZfjsDtHGlf4wZiDnahzL38iNSIUHC4I/m0SkWY8CQRLEeI8p64Psez6eIWoZf+qNDKVF6HMaaZzZ59f0Www6pfxiQCb6rMddOOZQEaVbhL47rkcSlC/5Mao2kGDT55be0m0pgLQ/+FSUdLeV4iDJjPnwhvQFHbHQy/CUXTIwEvUnBajvXw4hDzaQyyHncmcJZ+iYMS6zMAeSoju/OGSMu8Y+pvlRwzBpoW/t2qc3xk071InOaS/q0oQlXPDSY49+Enqnc7LpwkzSV9zx3HTExpinLJyb08dmecYvjzuP6b8qOn8jirjX9a4wDKCK4YQPAv2ATe0vm+oYYqQIDAQAB"
 }
