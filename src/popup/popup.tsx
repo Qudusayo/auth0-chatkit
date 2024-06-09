@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { LoremIpsum } from "lorem-ipsum";
 
 import "./popup.css";
@@ -19,6 +19,7 @@ const lorem = new LoremIpsum({
 });
 
 const Popup = () => {
+  const chatBottomRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
   const [messages, setMessages] = useState<
@@ -82,6 +83,14 @@ const Popup = () => {
     setProfile(null);
   };
 
+  const scrollToBottom = () => {
+    chatBottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
   const propagateUsrMsg = (msg: string) => {
     setMessages((messages) => [
       ...messages,
@@ -122,6 +131,7 @@ const Popup = () => {
             />
           )
         )}
+        <div ref={chatBottomRef}></div>
       </div>
     </Layout>
   ) : (

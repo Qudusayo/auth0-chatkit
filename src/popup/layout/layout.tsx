@@ -38,7 +38,7 @@ const Layout = ({
       </div>
 
       {/* Chat Box */}
-      <div className="flex-1 p-2">{children}</div>
+      <div className="flex-1 p-2 overflow-y-auto">{children}</div>
 
       {/* Footer */}
 
